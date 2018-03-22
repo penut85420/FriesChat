@@ -47,7 +47,7 @@ def get_message():
 		"https://imgur.com/RdmMoNP", "https://imgur.com/CLwCYMz", "https://imgur.com/pdkSSD8",
 		"https://imgur.com/k5wryWs", "https://imgur.com/Hdn6uQJ", "https://imgur.com/F3gyz9W",
 		"https://imgur.com/QGtisdN"]
-	return url[int(random.random() * len(url))]
+	return url[int(random.random() * len(url))] + ".jpg"
 
 if __name__ == '__main__':
 	app.run()
