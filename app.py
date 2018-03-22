@@ -37,11 +37,17 @@ def verify_fb_token(token_sent):
 	return "Invalid verification token"
 
 def send_message(recipient_id, response):
-	bot.send_text_message(recipient_id, response)
+	bot.send_image_url(recipient_id, response)
 	return "Success"
 
 def get_message():
-	return "https://scontent.ftpe8-4.fna.fbcdn.net/v/t1.0-0/p261x260/29496898_1624859180939324_6880977352713568256_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeGT53eZh376PkEhmUE0G1GYUVLNkLNQQM6B3MtkB6BwBdBeMyZd1PbSpyua_XAlcKJCYjzEnlYBhE19OIVSTpuTQDYdnkRAHJt5a-esW8YgbQ&oh=e054f5f39ebcc4fa75590bdefbf5e168&oe=5B344345"
+	url = ["https://imgur.com/MT2VzHJ", "https://imgur.com/zzbgTMn", "https://imgur.com/uW9SJ3v",
+		"https://imgur.com/96FZqHu", "https://imgur.com/fhepbnD", "https://imgur.com/P9LH7H7",
+		"https://imgur.com/zDd7Gqf", "https://imgur.com/GsH3IdP", "https://imgur.com/LwPIQTY",
+		"https://imgur.com/RdmMoNP", "https://imgur.com/CLwCYMz", "https://imgur.com/pdkSSD8",
+		"https://imgur.com/k5wryWs", "https://imgur.com/Hdn6uQJ", "https://imgur.com/F3gyz9W",
+		"https://imgur.com/QGtisdN"]
+	return url[int(random.random() * len(url))] + ".jpg"
 
 if __name__ == '__main__':
 	app.run()
